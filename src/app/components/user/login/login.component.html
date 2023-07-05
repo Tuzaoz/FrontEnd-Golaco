@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="conteudo">
+
+    <div class="header">
+      <h1>Login</h1>
+    </div>
+
+    <div class="middle">
+
+      <div class="conteudo-middle">
+        <form [formGroup]="formularioLogin">
+
+          <mat-form-field class="inputs">
+            <input pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" formControlName="login" matInput required
+              placeholder="E-mail">
+            <mat-error *ngIf="!formularioLogin.hasError('required')">
+              E-mail invalido
+            </mat-error>
+
+          </mat-form-field>
+          <br>
+          <mat-form-field class="inputs">
+            <input formControlName="senha" [value]="formularioLogin.value.senha" type="password" matInput
+              placeholder="Senha">
+            <mat-error *ngIf="!formularioLogin.hasError('required')">
+              Senha invalida
+            </mat-error>
+            <mat-error *ngIf="formularioLogin.hasError('senha')">
+              E-mail invalido
+            </mat-error>
+          </mat-form-field>
+        </form>
+
+        <button class="entrar" [disabled]='!(formularioLogin.valid)' (click)="login()" mat-raised-button
+          color="primary">Entrar</button>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p>
+        Ainda não tem conta?
+      </p>
+      <button (click)="cadastrar()" class="cadastrar" mat-raised-button color="primary">Cadastre-se</button>
+    </div>
+
+  </div>
+</div>

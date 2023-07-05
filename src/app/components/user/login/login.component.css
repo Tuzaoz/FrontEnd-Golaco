@@ -1,0 +1,72 @@
+.container {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../../../assets/img/background-login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.conteudo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 450px;
+  height: 500px;
+  
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #3f51b5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo-middle{
+  display: grid;
+}
+
+
+.footer {
+  background-color: #3f51b5;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cadastrar{
+  margin: 0px 10px 0px 10px;
+  background-color: white!important;
+  color: #3f51b5!important;
+  border: 1px solid black!important;
+}
+
+.cadastrar:hover{
+  background-color: #f2f2f2!important;
+}
+
+@media (max-width: 450px) {
+  .conteudo{
+    width: 350px;
+  }
+}
